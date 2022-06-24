@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
@@ -15,6 +16,9 @@ import { EstadisticaComponent } from './components/estadistica/estadistica.compo
 import { GestionEmpleadosComponent } from './components/gestion-empleados/gestion-empleados.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { AudienciasComponent } from './components/audiencias/audiencias.component';
+import { HeaderComponent } from './components/header/header.component';
+import { AvatarModule } from 'ngx-avatar';
+
 
 
 @NgModule({
@@ -28,15 +32,15 @@ import { AudienciasComponent } from './components/audiencias/audiencias.componen
     EstadisticaComponent,
     GestionEmpleadosComponent,
     AgendaComponent,
-    AudienciasComponent
+    AudienciasComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule,
     FormsModule,
-   
-
+   AvatarModule
   ],
   providers: [ LoginService,
  ],
