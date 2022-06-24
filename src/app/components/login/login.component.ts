@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   userform: Empleado = new Empleado(); //usuario mapeado al formulario
   returnUrl!: string;
   msglogin!: string; // mensaje que indica si no paso el loguin
-
+  empleado!: Empleado;
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -41,22 +41,23 @@ export class LoginComponent implements OnInit {
     this.loginService.login(this.userform.username, this.userform.password)
     .subscribe(
     (result) => {
+      
       var user = result;
       if (user.status == 1){
         //guardamos el user en cookies en el cliente
         sessionStorage.setItem("user", user.username);
         sessionStorage.setItem("userid", user.userid);
-        sessionStorage.setItem("perfil", user.perfil);
-        sessionStorage.setItem("rol", user.rol);
-
-        //Pregunto si el rol coincide con administrador, si pasa eso tendria que redireccionar a pricipalAdmi
-        if(user.rol == 'administrador'){
-          this.irAPricipalAdmi();
+        //sessionStorage.setItem("perfil", user.perfil);
+        sessionStorage.setItem("perfil", user.rol);
+        console.log(user);
+        if(user.perfil == 'administrador'){
+          //redirigimos a home o a pagina que llamo
+             this.irAPricipalAdmi();
         }else{ //en caso contrario ira a principalParticipante
-          this.irAPricipalParticipante(); 
+           this.irAPricipalParticipante(); 
         }
-        //redirigimos a home o a pagina que llamo
-        this.router.navigateByUrl(this.returnUrl);
+        
+       
       } else {
         //usuario no encontrado muestro mensaje en la vista
         this.msglogin="Credenciales incorrectas..";
@@ -67,6 +68,17 @@ export class LoginComponent implements OnInit {
       console.log("error en conexion");
       console.log(error);
       });
+    }
+    rolPrincipal(){
+      this.empleado= new Empleado();
+      this.loginService.userLogged();
+      //Pregunto si el rol coincide con administrador, si pasa eso tendria que redireccionar a pricipalAdmi
+      // if(user.rol == 'administrador'){
+      //   //redirigimos a home o a pagina que llamo
+      //   this.irAPricipalAdmi();
+      // }else{ //en caso contrario ira a principalParticipante
+      //   this.irAPricipalParticipante(); 
+      // }
     }
      
 }
