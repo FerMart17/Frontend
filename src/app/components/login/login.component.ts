@@ -69,16 +69,6 @@ export class LoginComponent implements OnInit {
       console.log(error);
       });
     }
-    rolPrincipal(){
-      this.empleado= new Empleado();
-      this.loginService.userLogged();
-      //Pregunto si el rol coincide con administrador, si pasa eso tendria que redireccionar a pricipalAdmi
-      // if(user.rol == 'administrador'){
-      //   //redirigimos a home o a pagina que llamo
-      //   this.irAPricipalAdmi();
-      // }else{ //en caso contrario ira a principalParticipante
-      //   this.irAPricipalParticipante(); 
-      // }
-    }
+    
      
 }

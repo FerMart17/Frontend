@@ -13,6 +13,7 @@ import { PrincipalParticipanteComponent } from './components/principal-participa
 import { PrincipalComponent } from './components/principal/principal.component';
 import { HeaderComponent } from './components/header/header.component';
 
+import { AvatarModule } from 'ngx-avatar';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { HeaderComponent } from './components/header/header.component';
     AppRoutingModule, 
     HttpClientModule,
     FormsModule,
-   
+    AvatarModule
 
   ],
   providers: [ LoginService,
