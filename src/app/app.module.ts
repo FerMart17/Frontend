@@ -14,6 +14,7 @@ import { PrincipalComponent } from './components/principal/principal.component';
 import { HeaderComponent } from './components/header/header.component';
 
 import { AvatarModule } from 'ngx-avatar';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AvatarModule } from 'ngx-avatar';
     PrincipalAdmiComponent,
     PrincipalParticipanteComponent,
     PrincipalComponent,
-    HeaderComponent
+    HeaderComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
