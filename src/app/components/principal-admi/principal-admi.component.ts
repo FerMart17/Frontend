@@ -13,5 +13,15 @@ export class PrincipalAdmiComponent implements OnInit {
   ngOnInit(): void {
   }
 
+RegistroReuniones(){
+  this.router.navigate(['principal/Administrador/registroReuniones']);
+}
+
+Estadistica(){
+  this.router.navigate(['principal/Administrador/estadistica']);
+}
+GestionEmpleados(){
+  this.router.navigate(['principal/Administrador/gestioEmpleados']);
+}
 
 }

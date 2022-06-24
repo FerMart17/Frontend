@@ -10,6 +10,11 @@ import { LoginComponent } from './components/login/login.component';
 import { PrincipalAdmiComponent } from './components/principal-admi/principal-admi.component';
 import { PrincipalParticipanteComponent } from './components/principal-participante/principal-participante.component';
 import { PrincipalComponent } from './components/principal/principal.component';
+import { RegistroReunionesComponent } from './components/registro-reuniones/registro-reuniones.component';
+import { EstadisticaComponent } from './components/estadistica/estadistica.component';
+import { GestionEmpleadosComponent } from './components/gestion-empleados/gestion-empleados.component';
+import { AgendaComponent } from './components/agenda/agenda.component';
+import { AudienciasComponent } from './components/audiencias/audiencias.component';
 
 
 @NgModule({
@@ -18,7 +23,12 @@ import { PrincipalComponent } from './components/principal/principal.component';
     LoginComponent,
     PrincipalAdmiComponent,
     PrincipalParticipanteComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    RegistroReunionesComponent,
+    EstadisticaComponent,
+    GestionEmpleadosComponent,
+    AgendaComponent,
+    AudienciasComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-principal-participante',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalParticipanteComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
   }
+  Audiencias(){
+    this.router.navigate(['principal/Participante/audiencias']);
+ }
+
+Agenda(){
+  this.router.navigate(['principal/Participante/agenda']);
+}
 
 }
