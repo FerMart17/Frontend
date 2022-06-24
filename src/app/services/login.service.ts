@@ -10,7 +10,7 @@ export class LoginService {
   hostBase!: string;
 
   constructor(private _http:HttpClient) {
-    this.hostBase = "http://localhost:4000/api/empleados/";
+    this.hostBase = "http://localhost:4000/api/empleado/";
   }
 
   public login(username: string, password: string):Observable<any> {
@@ -27,7 +27,7 @@ export class LoginService {
   public logout() {
     //borro el vble almacenado mediante el storage
     sessionStorage.removeItem("user");
-    sessionStorage.removeItem("perfil");
+    sessionStorage.removeItem("rol");
     sessionStorage.removeItem("userid");
   } 
 

@@ -17,8 +17,12 @@ import { GestionEmpleadosComponent } from './components/gestion-empleados/gestio
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { AudienciasComponent } from './components/audiencias/audiencias.component';
 import { HeaderComponent } from './components/header/header.component';
-import { AvatarModule } from 'ngx-avatar';
 
+
+
+
+import { AvatarModule } from 'ngx-avatar';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 
 @NgModule({
@@ -28,19 +32,29 @@ import { AvatarModule } from 'ngx-avatar';
     PrincipalAdmiComponent,
     PrincipalParticipanteComponent,
     PrincipalComponent,
+<<<<<<< HEAD
     RegistroReunionesComponent,
     EstadisticaComponent,
     GestionEmpleadosComponent,
     AgendaComponent,
     AudienciasComponent,
     HeaderComponent
+=======
+    HeaderComponent,
+    CalendarComponent
+>>>>>>> 48c2e7c96bb3536f498daebe48440724df546d85
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule,
     FormsModule,
+<<<<<<< HEAD
    AvatarModule
+=======
+    AvatarModule
+
+>>>>>>> 48c2e7c96bb3536f498daebe48440724df546d85
   ],
   providers: [ LoginService,
  ],

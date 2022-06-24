@@ -10,6 +10,7 @@ import { EstadisticaComponent } from './components/estadistica/estadistica.compo
 import { GestionEmpleadosComponent } from './components/gestion-empleados/gestion-empleados.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
 import { AudienciasComponent } from './components/audiencias/audiencias.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 const routes: Routes = [
 
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'principal/Participante/audiencias', component: AudienciasComponent, pathMatch: 'full' },
   {path: 'principal/Participante/agenda', component: AgendaComponent, pathMatch: 'full' },
 
+  {path: 'calendar', component: CalendarComponent, pathMatch: 'full' },
   {path: '**', pathMatch: 'prefix', redirectTo: 'principal',},
 ];
 
